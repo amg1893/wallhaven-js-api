@@ -3,7 +3,7 @@
 This library searchs or obtains wallpapers from wallhaven. The petitions are made to a Heroku instance of the [wallhaven-api from www-working and modified by me](https://github.com/amg1893/wallhaven-js-api). In order to make it work, you have to create an instance and put the URL into the baseURL of the library.
 
 ## Examples
-Search: https://wallhaven-api.now.sh/search?keyword=attack%20on%20titans
+Search: https://wallhaven-api.now.sh/search?keyword=attack%20on%20titans  
 Details: https://wallhaven-api.now.sh/details/482373
 
 
