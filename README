@@ -1,0 +1,17 @@
+# Wallhaven Javascript API
+
+This library searchs or obtains wallpapers from wallhaven. The petitions are made to a Heroku instance of the [wallhaven-api from www-working and modified by me](https://github.com/amg1893/wallhaven-js-api). In order to make it work, you have to create an instance and put the URL into the baseURL of the library.
+
+## Usage
+```js
+	var api = new Wallhaven();
+	photo.getByKeyword('keyword', {sorting: 'random'}, function(resp){
+		// iterate over resp.images
+	});
+	photo.getDetails(309834, function(resp){
+		// details of the image
+	});
+```
+
+### getByKeyword(keyword, [options,] callback)
+Searchs by keyword. Possible options:
