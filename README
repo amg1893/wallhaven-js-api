@@ -15,3 +15,36 @@ This library searchs or obtains wallpapers from wallhaven. The petitions are mad
 
 ### getByKeyword(keyword, [options,] callback)
 Searchs by keyword. Possible options:
+
+#### options.categories
+
+Type: `Array`<br>
+Default: `['general', 'anime', 'people']`
+
+#### options.page
+
+Type: `Number`<br>
+Default: `1`
+
+#### options.sorting
+
+Type: `string`<br>
+Default: `relevance`<br>
+Value: one of `relevance` `random` `date_added` `views` `favorites`
+
+#### options.nsfw
+
+Type: `boolean`<br>
+Default: `false`
+
+Show NSFW (not safe for work) result.
+
+#### options.sketchy
+
+Type: `boolean`<br>
+Default: `false`
+
+Show sketchy wallpapers only.
+
+### getDetails(id, callback)
+Get details of a wallpaper by id.
