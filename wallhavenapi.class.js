@@ -1,10 +1,11 @@
 class WallhavenApi {
 
 	constructor() {
-		this.baseURL = '<ENTER YOUR HEROKU URL INSTANCE HERE>';
+		this.baseURL = 'https://antc-wallhavenapi.herokuapp.com';
 		this.searchURL = this.baseURL+'/search';
 		this.detailsURL = this.baseURL+'/details/';
 		this.fullImageURL = "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-<id>.jpg";
+		this.thumbURL = "https://alpha.wallhaven.cc/wallpapers/thumb/small/th-<id>.jpg";
 	}
 
 	getByKeyword(keyword, optionsOrCallback, callback){
@@ -34,6 +35,10 @@ class WallhavenApi {
 
 	getFullImageURL(id) {
 		return this.fullImageURL.replace('<id>', id);
+	}
+
+	getThumbImageURL(id) {
+		return this.thumbURL.replace('<id>', id);
 	}
 
 }
