@@ -10,6 +10,8 @@ class WallhavenApi {
 
 	getByKeyword(keyword, optionsOrCallback, callback){
 
+		var self = this;
+
 		var limit = (optionsOrCallback.limit != undefined) ? optionsOrCallback.limit : 24;
 
 		var parameters = {};
@@ -33,7 +35,7 @@ class WallhavenApi {
 			$.get(this.searchURL, parameters).done(function(resp){
 				loop++;
 
-				if (resp.images != 'undefined') {
+				if (resp.images != 'undefined' && resp.images.length > 0) {
 					result.push(resp.images);
 				}
 
@@ -46,7 +48,7 @@ class WallhavenApi {
 							resp.images.push(result[pos].shift());
 						}
 					}
-
+					
 					if(typeof optionsOrCallback == 'function') {
 						optionsOrCallback(resp);
 					} else if(typeof callback == 'function') {
